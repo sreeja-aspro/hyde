@@ -5390,3 +5390,8 @@ body {
     bottom: 45px;
   }
 }
+
+#testiTrack {
+  touch-action: pan-x;
+  cursor: grab;
+}

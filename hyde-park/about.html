@@ -360,26 +360,24 @@
             const track = document.getElementById("testiTrack");
 
             let position = 0;
-            let speed = 0.5; // auto-move speed
+            let speed = 0.5;
             let isDown = false;
             let startX;
-            let scrollLeft;
             let isDragging = false;
 
             function animate() {
                 if (!isDragging) {
                     position -= speed;
                     if (Math.abs(position) >= track.scrollWidth / 2) {
-                        position = 0; // reset for seamless loop
+                        position = 0;
                     }
                     track.style.transform = `translateX(${position}px)`;
                 }
                 requestAnimationFrame(animate);
             }
-
             animate();
 
-            // Mouse drag
+            /* MOUSE */
             track.addEventListener("mousedown", (e) => {
                 isDown = true;
                 isDragging = true;
@@ -396,33 +394,32 @@
             document.addEventListener("mousemove", (e) => {
                 if (!isDown) return;
                 const x = e.pageX;
-                const walk = (x - startX);
-                position += walk;
+                position += x - startX;
                 track.style.transform = `translateX(${position}px)`;
                 startX = x;
             });
 
-            // Touch drag
+            /* TOUCH — scoped + non-passive */
             track.addEventListener("touchstart", (e) => {
                 isDown = true;
                 isDragging = true;
                 startX = e.touches[0].pageX;
-            });
+            }, { passive: true });
 
-            document.addEventListener("touchend", () => {
+            track.addEventListener("touchmove", (e) => {
+                if (!isDown) return;
+                const x = e.touches[0].pageX;
+                position += x - startX;
+                track.style.transform = `translateX(${position}px)`;
+                startX = x;
+            }, { passive: true });
+
+            track.addEventListener("touchend", () => {
                 isDown = false;
                 isDragging = false;
             });
-
-            document.addEventListener("touchmove", (e) => {
-                if (!isDown) return;
-                const x = e.touches[0].pageX;
-                const walk = (x - startX);
-                position += walk;
-                track.style.transform = `translateX(${position}px)`;
-                startX = x;
-            });
         </script>
+
 
     </main>
 
