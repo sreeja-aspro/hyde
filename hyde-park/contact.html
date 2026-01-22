@@ -1,0 +1,398 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hyde Park Apartments</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/x-icon">
+
+    <!-- All css here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/all-animations.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!--  ====== preloader=============================================  -->
+    <div id="preloader">
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /preloader -->
+
+    <!--  ====== header-area-start =======================================  -->
+
+    <div class="whatsapp-left-bottom">
+        <a href="https://wa.me/442077922800" target="_blank" aria-label="Chat on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+    <header class="msk-navbar">
+        <div class="msk-container">
+            <a href="#" class="msk-logo"><img src="images/logo/HPA-Logo.png" alt="Logo"></a>
+            <div class="msk-right">
+                <div class="msk-phone"><i class="fas fa-phone"></i> +44 (0) 20 8054 4740</div>
+                <button id="navToggle" class="msk-toggle">
+                    <span class="msk-toggle-text">MENU</span>
+                    <span class="msk-hamburger"><span></span><span></span><span></span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!--  header-area-end  -->
+
+
+    <div class="page-spacer"></div>
+
+    <aside id="mskDrawer" class="msk-drawer">
+        <div class="msk-drawer-header">
+            <img src="images/logo/HPA-Logo.png" alt="Logo">
+        </div>
+        <div class="msk-drawer-body">
+            <nav class="drawer-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+
+                <a href="gallery.html"><i class="fas fa-image"></i>
+                    Gallery</a>
+                <a href="contact.html" class="act"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+
+            <div class="msk-drawer-footer">
+                <div class="drawer-contact">
+                    <div class="phone"><i class="fas fa-phone"></i> +44 (0) 20 8054 4740</div>
+                    <div class="addr"><i class="fas fa-map-marker-alt"></i> Main reception: 52-56 Inverness Terrace,
+                        London,
+                        W2 3LB</div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </aside>
+    <script>
+        (function () {
+            const toggle = document.getElementById('navToggle');
+            const drawer = document.getElementById('mskDrawer');
+            const body = document.body;
+            const toggleText = toggle.querySelector('.msk-toggle-text');
+
+            function openMenu() {
+                drawer.classList.add('active');
+                toggle.classList.add('active');
+                body.classList.add('menu-open');
+                toggleText.textContent = 'CLOSE';
+            }
+            function closeMenu() {
+                drawer.classList.remove('active');
+                toggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                toggleText.textContent = 'MENU';
+            }
+
+            toggle.addEventListener('click', () => drawer.classList.contains('active') ? closeMenu() : openMenu());
+            document.addEventListener('keydown', e => { if (e.key === "Escape" && drawer.classList.contains('active')) closeMenu(); });
+            window.addEventListener('resize', () => { if (drawer.classList.contains('active')) closeMenu(); });
+        })();
+    </script>
+
+
+    <div class="inner-page-hero-area">
+        <div class="inner-page-height inner-page-bg d-flex align-items-center position-relative black-overly"
+            data-background="images/bg/contact-bg.png">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="inner-page-content text-center">
+
+                            <h1 class="text-white mb-20 text-capitalize aos-init" data-aos="fade-up"
+                                data-aos-duration="1800" data-aos-delay="50">Contact Us</h1>
+                            <p class="text-white aos-init" data-aos="fade-up" data-aos-duration="2500"
+                                data-aos-delay="150">Let’s connect and make your stay unforgettable</p>
+                        </div>
+                    </div><!-- /col -->
+
+                </div><!-- /row -->
+            </div><!-- /container -->
+
+            <nav aria-label="breadcrumb" class="inner-hero-nav position-absolute bottom-0 mb-20">
+                <ol class="breadcrumb justify-content-center bg-transparent">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active text-capitalize text-white" aria-current="page">Contact
+                    </li>
+                </ol>
+            </nav><!-- /breadcrumb -->
+
+        </div>
+    </div><!-- /side-mobile-menu -->
+
+    <!-- header extra info end  -->
+
+
+    <main class="over-hidden">
+
+        <div class="contact-area contact-page mt-120">
+            <div class="container">
+                <div class="row contact-info-wrapper justify-content-center">
+                    <div class="col-xl-4 col-lg-4 col-md-4  col-sm-8 col-12 contact-info-sep position-relative mb-30">
+                        <div class="contact-page-info contact-location position-relative text-center">
+                            <div class="contact-icon theme-bg d-inline-block text-center mb-30 mr-0">
+                                <span class="d-inline-block"><i class="fas fa-map-marker-alt"></i></span>
+                            </div><!-- /contact-icon -->
+                            <div class="contact-text">
+                                <h4 class="mb-15">Address</h4>
+                                <p class="mb-0">52-56 Inverness Terrace,<br> Westminster Borough,
+                                    <br> London, W2 3LB,<br> United Kingdom.
+                                </p>
+                            </div>
+                        </div><!-- /contact-location -->
+                    </div><!-- /col -->
+
+                    <div class="col-xl-4 col-lg-4 col-md-4  col-sm-8 col-12 contact-info-sep position-relative mb-30">
+                        <div class="contact-page-info contact-phone position-relative text-center">
+                            <div class="contact-icon theme-bg theme-bg d-inline-block text-center mb-30 mr-0">
+                                <span class="d-inline-block"><i class="fas fa-phone-alt"></i></span>
+                            </div><!-- /contact-icon -->
+                            <div class="contact-text">
+                                <h4 class="mb-3">Phone Number</h4>
+                                <p class="mb-0">
+                                    <a class="d-block" href="tel:+442077922800">+44 20 7792 2800</a>
+
+                                </p>
+                            </div>
+                        </div><!-- /contact-location -->
+                    </div><!-- /col -->
+
+                    <div class="col-xl-4 col-lg-4 col-md-4  col-sm-8 col-12 contact-info-sep position-relative mb-30">
+                        <div class="contact-page-info contact-email text-center">
+                            <div class="contact-icon theme-bg d-inline-block text-center mb-30 mr-0">
+                                <span class="d-inline-block"><i class="fas fa-envelope"></i></span>
+                            </div><!-- /contact-icon -->
+                            <div class="contact-text">
+                                <h4 class="mb-3">Email Address</h4>
+                                <p class="mb-0">
+                                    <a class="d-block" href="#">hydepark@gmail.com</a>
+
+                                </p>
+                            </div>
+                        </div><!-- /contact-email -->
+                    </div><!-- /col -->
+                </div><!-- /row -->
+
+                <div class="row">
+                    <div class="col-xl-12  col-lg-12  col-md-12  col-sm-12 col-12">
+                        <div class="contact-wrapper contact-page-form-margin pt-70">
+                            <div class="contact-form">
+                                <div class="con-title">
+                                    <h4 class="mb-35">Write Us Something</h4>
+                                </div><!-- /title -->
+                                <form action="php/mail.php" method="POST" id="contact-form">
+                                    <div class="contact-info text-md-center text-lg-left pt-20">
+                                        <div class="row">
+
+                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3 px-md-2"
+                                                data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                                                data-aos-duration="2000">
+                                                <input class="name w-100 primary-border pl-20 pt-15 pb-15 pr-10"
+                                                    type="text" name="inputName" id="inputName" placeholder="Your Name"
+                                                    required><!-- /name -->
+                                            </div><!-- /col -->
+
+                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3 px-md-2"
+                                                data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                                                data-aos-duration="2500">
+                                                <input class="email w-100 primary-border pl-20 pt-15 pb-15 pr-10"
+                                                    type="email" name="inputEmail" id="inputEmail"
+                                                    placeholder="Your Email" required><!-- /email -->
+                                            </div><!-- /col -->
+
+                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3 px-md-2"
+                                                data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                                                data-aos-duration="2000">
+                                                <input class="website w-100 primary-border pl-20 pt-15 pb-15 pr-10"
+                                                    type="text" name="inputWebsite" id="inputWebsite"
+                                                    placeholder="Website" required><!-- /name -->
+                                            </div><!-- /col -->
+
+                                        </div><!-- /row -->
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3 px-md-2"
+                                                data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                                                data-aos-duration="2000">
+                                                <textarea class="massage w-100 primary-border pl-20 pt-20"
+                                                    name="inputMessage" id="inputMessage"
+                                                    placeholder="Write your comment here"
+                                                    required></textarea><!-- /textarea -->
+                                            </div><!-- /col -->
+                                        </div><!-- /row -->
+                                        <div class="my-btn w-50">
+                                            <button class="btn theme-bg text-uppercase rounded-0 f-500 w-100"
+                                                type="submit" name="submit" data-aos="fade-up"
+                                                data-aos-anchor-placement="top-bottom" data-aos-duration="2500">Submit
+                                                now</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <p class="form-message mt-20"></p>
+                            </div><!-- /contact-form -->
+                        </div><!-- /contact-wrapper -->
+                    </div><!-- /col -->
+                </div><!-- /row -->
+
+            </div><!-- /container -->
+
+            <section class="multiMapSection">
+                <h2>Our Apartment Locations</h2>
+                <div class="mapGrid">
+                    <!-- Hyde Park Superior Apartments -->
+                    <div class="mapCard">
+                        <h3>Hyde Park Superior Apartments</h3>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.574229716021!2d-0.1914637426564377!3d51.51122926127567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761aad0d7b5f87%3A0x4c39c0cfa1f58a2e!2s34%20Inverness%20Terrace%2C%20London%20W2%203JA%2C%20UK!5e0!3m2!1sen!2sin!4v1695433230987!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    <!-- Imperial Court Suites -->
+                    <div class="mapCard">
+                        <h3>Imperial Court Suites</h3>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.5657749160868!2d-0.19195974265643776!3d51.51162926127565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761aad07e46ff9%3A0x6a35b2f1fc0f4a3b!2s81%20Inverness%20Terrace%2C%20London%20W2%203JU%2C%20UK!5e0!3m2!1sen!2sin!4v1695433230987!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    <!-- Imperial Court Studios -->
+                    <div class="mapCard">
+                        <h3>Imperial Court Studios</h3>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.5669021160614!2d-0.1921597426564377!3d51.51142926127564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761aad0d7b5f87%3A0xd3d08055d499a4e0!2s77-79%20Inverness%20Terrace%2C%20London%20W2%203JT%2C%20UK!5e0!3m2!1sen!2sin!4v1695433230987!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    <!-- New Kent Apartments -->
+                    <div class="mapCard">
+                        <h3>New Kent Apartments</h3>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.5678685160478!2d-0.19265974265643773!3d51.51122926127567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761aad07e46ff9%3A0xc0a2a3cbdba958!2s55%20Inverness%20Terrace%2C%20London%20W2%203JN%2C%20UK!5e0!3m2!1sen!2sin!4v1695433230987!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- contact-area-end  -->
+
+
+
+    </main>
+    <div class="body-overlay"></div>
+    <!-- ====== footer-area-start ============================================ -->
+    <footer>
+        <div class="footerWrapper">
+
+            <!-- Logo + About -->
+            <div class="footerCol">
+                <img src="images/logo/HPA-Logo.png" alt="Hyde Park Logo" class="footerLogo">
+                <p>Hyde Park Apartments offers comfort and convenience in the heart of London. Stay close to Hyde Park
+                    and enjoy modern serviced living.</p>
+            </div>
+
+            <!-- Connect -->
+            <div class="footerCol">
+                <h4>Connect</h4>
+                <p><i class="fa-solid fa-envelope"></i> reservation@hydeparkstay.com</p>
+                <p><i class="fa-solid fa-phone"></i> +44 (0) 20 8054 4740</p>
+            </div>
+
+            <!-- Main Reception -->
+            <div class="footerCol">
+                <h4>Main Reception</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 52-56 Inverness Terrace, <br>Westminster Borough,<br>
+                    London, W2 3LB, United Kingdom.</p>
+                <a href="https://maps.app.goo.gl/z1gPtaDuzgDGTxst6" target="_blank"><i class="fa-solid fa-map"></i> Get
+                    directions</a>
+            </div>
+
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footerBottom">
+            © 2025 Hyde Park Apartments. All rights reserved. Designed By <a href="https://asprotechnologies.com/"
+                target="_blank">Aspro
+                Technologies</a>
+        </div>
+    </footer>
+    <!-- footer-area-end  -->
+
+
+    <a href="#" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <script>
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+    </script>
+
+
+
+    <!-- All js here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/image-loaded.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/waypoint.js"></script>
+    <script src="js/counterup-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,520 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hyde Park Apartments</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/x-icon">
+
+    <!-- All css here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/all-animations.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!--  ====== preloader=============================================  -->
+    <div id="preloader">
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /preloader -->
+
+    <!--  ====== header-area-start =======================================  -->
+
+
+    <div class="whatsapp-left-bottom">
+        <a href="https://wa.me/442077922800" target="_blank" aria-label="Chat on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+
+    <header class="msk-navbar">
+        <div class="msk-container">
+            <a href="#" class="msk-logo"><img src="images/logo/HPA-Logo.png" alt="Logo"></a>
+            <div class="msk-right">
+                <div class="msk-phone"><i class="fas fa-phone"></i> +44 (0) 20 8054 4740</div>
+                <button id="navToggle" class="msk-toggle">
+                    <span class="msk-toggle-text">MENU</span>
+                    <span class="msk-hamburger"><span></span><span></span><span></span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-spacer"></div>
+
+    <aside id="mskDrawer" class="msk-drawer">
+        <div class="msk-drawer-header">
+            <img src="images/logo/HPA-Logo.png" alt="Logo">
+        </div>
+        <div class="msk-drawer-body">
+            <nav class="drawer-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+
+                <a href="about.html" class="act"><i class="fas fa-info-circle"></i> About</a>
+
+                <a href="gallery.html"><i class="fas fa-image"></i>
+                    Gallery</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+
+            <div class="msk-drawer-footer">
+                <div class="drawer-contact">
+                    <div class="phone"><i class="fas fa-phone"></i> +44 (0) 20 8054 4740</div>
+                    <div class="addr"><i class="fas fa-map-marker-alt"></i> Main reception: 52-56 Inverness Terrace,
+                        London,
+                        W2 3LB</div><br>
+                </div>
+
+            </div>
+        </div>
+    </aside>
+    <script>
+        (function () {
+            const toggle = document.getElementById('navToggle');
+            const drawer = document.getElementById('mskDrawer');
+            const body = document.body;
+            const toggleText = toggle.querySelector('.msk-toggle-text');
+
+            function openMenu() {
+                drawer.classList.add('active');
+                toggle.classList.add('active');
+                body.classList.add('menu-open');
+                toggleText.textContent = 'CLOSE';
+            }
+            function closeMenu() {
+                drawer.classList.remove('active');
+                toggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                toggleText.textContent = 'MENU';
+            }
+
+            toggle.addEventListener('click', () => drawer.classList.contains('active') ? closeMenu() : openMenu());
+            document.addEventListener('keydown', e => { if (e.key === "Escape" && drawer.classList.contains('active')) closeMenu(); });
+            window.addEventListener('resize', () => { if (drawer.classList.contains('active')) closeMenu(); });
+        })();
+    </script>
+
+
+    <div class="inner-page-hero-area">
+        <div class="inner-page-height inner-page-bg d-flex align-items-center position-relative black-overly"
+            data-background="images/bg/about-bg.jpg">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="inner-page-content text-center">
+
+                            <h1 class="text-white mb-20 text-capitalize aos-init" data-aos="fade-up"
+                                data-aos-duration="1800" data-aos-delay="50">About Us</h1>
+                            <p class="text-white aos-init" data-aos="fade-up" data-aos-duration="2500"
+                                data-aos-delay="150">Experience Comfort, Elegance, and the Heart of London Living</p>
+                        </div>
+                    </div><!-- /col -->
+
+                </div><!-- /row -->
+            </div><!-- /container -->
+
+            <nav aria-label="breadcrumb" class="inner-hero-nav position-absolute bottom-0 mb-20">
+                <ol class="breadcrumb justify-content-center bg-transparent">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active text-capitalize text-white" aria-current="page">About Us
+                    </li>
+                </ol>
+            </nav><!-- /breadcrumb -->
+
+        </div>
+    </div>
+
+    <main>
+
+        <section class="hydeAboutNoBG" id="hydeAboutNoBG">
+            <center>
+                <div class="hydeAboutSubtitleNoBG">
+                    Experience <span class="hydeHighlight">comfort</span> and <span
+                        class="hydeHighlight">elegance</span>
+                    Discover <span class="hydeHighlight">luxurious</span> living spaces
+                    Right in the <span class="hydeHighlight">heart of London</span>
+                </div>
+            </center>
+            <div class="hydeAboutParagraphNoBG">
+                Hyde Park Apartments combines modern design with timeless elegance, offering an unforgettable stay for
+                every
+                guest. Each apartment is meticulously designed with attention to detail, providing spacious layouts,
+                stylish
+                furnishings, and premium amenities. Located in prime areas of London, guests have easy access to
+                world-famous attractions, shopping districts, and dining experiences. Our dedicated team delivers
+                personalized service to ensure every stay is seamless and memorable. Whether you are traveling for
+                business
+                or leisure, Hyde Park Apartments offers the perfect blend of comfort, convenience, and luxury.
+                Experience a
+                home away from home while enjoying the vibrant culture and charm of London, making each visit truly
+                exceptional.
+            </div>
+        </section>
+
+        <!-- JS for bounce on scroll -->
+        <script>
+            const hydeAboutNoBG = document.getElementById('hydeAboutNoBG');
+
+            const hydeObserverNoBG = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            hydeObserverNoBG.observe(hydeAboutNoBG);
+        </script>
+        <section class="hydeAboutWrapper" id="hydeAboutSection">
+            <div class="hydeAboutImage">
+                <img src="images/about-page/about.jpg" alt="Hyde Park Apartment Room">
+            </div>
+            <div class="hydeAboutContent">
+                <div class="hydeAboutSubtitle">
+                    Premium Apartments for <span class="hydeHighlight">Every Guest</span>
+                </div>
+                <div class="hydeAboutParagraph mb-4">
+                    <h6> 1. Hyde Park Superior Apartments</h6>
+                    Stylish London apartments with fully equipped kitchens, seating/dining areas, and modern amenities.
+                    Located 20 minutes from Westfield Shopping Centre and close to Portobello Road Market. Couples rate
+                    it 9.0 for location and comfort.
+                </div>
+                <div class="hydeAboutParagraph mb-4">
+                    <h6>2. Imperial Court Suites</h6>
+                    Modern suites with free WiFi, kitchenette, private bathroom, and flat-screen TV. A 15-minute walk
+                    from Portobello Road Market and near Hyde Park and Royal Albert Hall. Couples rate it 8.9 for the
+                    excellent location.
+                </div>
+                <div class="hydeAboutParagraph mb-4">
+                    <h6> 3. Imperial Court Studios</h6>
+                    Central London studios near Paddington Station, Portobello Road Market, and Royal Albert Hall.
+                    Features include free WiFi, kitchenette, and private bathroom. Couples rate it 8.8 for convenience
+                    and location.
+                </div>
+                <div class="hydeAboutParagraph">
+                    <h6>4. New Kent Apartments</h6>
+                    Central apartments with kitchenette, private bathroom, sofa bed, and modern amenities. Walking
+                    distance to Portobello Road Market and The Serpentine with easy public transport. Couples rate it
+                    9.1 for location and service.
+                </div>
+            </div>
+        </section>
+
+        <!-- JS for bounce on scroll -->
+        <script>
+            const hydeAboutSection = document.getElementById('hydeAboutSection');
+
+            const hydeObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            hydeObserver.observe(hydeAboutSection);
+        </script>
+
+        <section class="hydeEliteWrapper">
+            <h2 class="hydeEliteTitle">What Sets Us Apart</h2>
+            <center>
+                <p class="hydeEliteSubtitle">Explore the unique features, luxury, and premium services that make Hyde
+                    Park
+                    Apartments a perfect choice for your stay in London.</p>
+            </center>
+
+            <div class="hydeEliteGrid" id="hydeEliteGrid">
+                <!-- Card 1 -->
+                <div class="hydeEliteCard">
+                    <div class="hydeEliteIcon"><i class="fa-solid fa-couch"></i></div>
+                    <h3 class="hydeEliteFeatureTitle">Luxury & Comfort</h3>
+                    <p class="hydeEliteFeatureDesc">Elegantly furnished apartments with modern amenities ensure comfort
+                        and
+                        a premium living experience for all guests.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="hydeEliteCard">
+                    <div class="hydeEliteIcon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3 class="hydeEliteFeatureTitle">Prime Location</h3>
+                    <p class="hydeEliteFeatureDesc">Centrally located near London’s iconic attractions, shopping areas,
+                        and
+                        transport hubs for ultimate convenience.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="hydeEliteCard">
+                    <div class="hydeEliteIcon"><i class="fa-solid fa-hands-helping"></i></div>
+                    <h3 class="hydeEliteFeatureTitle">Exceptional Service</h3>
+                    <p class="hydeEliteFeatureDesc">Dedicated staff providing 24/7 front desk, concierge services, and
+                        personalized guest support for a memorable stay.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="hydeEliteCard">
+                    <div class="hydeEliteIcon"><i class="fa-solid fa-wifi"></i></div>
+                    <h3 class="hydeEliteFeatureTitle">High-Speed WiFi</h3>
+                    <p class="hydeEliteFeatureDesc">Stay connected with complimentary high-speed WiFi in every
+                        apartment,
+                        ideal for work or leisure.</p>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const hydeEliteGrid = document.getElementById('hydeEliteGrid');
+
+            const hydeObserver1 = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            hydeObserver1.observe(hydeEliteGrid);
+        </script>
+        <section class="testiAutoWrapper">
+            <h2>What Our Guests Say</h2>
+            <div class="testiTrack" id="testiTrack">
+                <!-- Testimonials (duplicated for infinite effect) -->
+                <div class="testiCard">
+                    <p class="testiQuote">“The apartment was spotless and perfectly located near Hyde Park.”</p>
+                    <div class="testiStars">★★★★★</div>
+                    <div class="testiName">— Sarah J.</div>
+                </div>
+                <div class="testiCard">
+                    <p class="testiQuote">“Outstanding service and hospitality. The staff made our trip memorable.”</p>
+                    <div class="testiStars">★★★★★</div>
+                    <div class="testiName">— Daniel R.</div>
+                </div>
+                <div class="testiCard">
+                    <p class="testiQuote">“Perfect balance of comfort and convenience. Highly recommend.”</p>
+                    <div class="testiStars">★★★★★</div>
+                    <div class="testiName">— Priya M.</div>
+                </div>
+                <div class="testiCard">
+                    <p class="testiQuote">“Great location, cozy rooms, and everything within walking distance!”</p>
+                    <div class="testiStars">★★★★★</div>
+                    <div class="testiName">— Michael T.</div>
+                </div>
+
+                <!-- Duplicate for seamless loop -->
+                <div class="testiCard">
+                    <p class="testiQuote">“The apartment was spotless and perfectly located near Hyde Park.”</p>
+                    <div class="testiStars">★★★★★</div>
+                    <div class="testiName">— Sarah J.</div>
+                </div>
+                <div class="testiCard">
+                    <p class="testiQuote">“Outstanding service and hospitality. The staff made our trip memorable.”</p>
+                    <div class="testiStars">★★★★★</div>
+                    <div class="testiName">— Daniel R.</div>
+                </div>
+                <div class="testiCard">
+                    <p class="testiQuote">“Perfect balance of comfort and convenience. Highly recommend.”</p>
+                    <div class="testiStars">★★★★★</div>
+                    <div class="testiName">— Priya M.</div>
+                </div>
+                <div class="testiCard">
+                    <p class="testiQuote">“Great location, cozy rooms, and everything within walking distance!”</p>
+                    <div class="testiStars">★★★★★</div>
+                    <div class="testiName">— Michael T.</div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const track = document.getElementById("testiTrack");
+
+            let position = 0;
+            let speed = 0.5; // auto-move speed
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            let isDragging = false;
+
+            function animate() {
+                if (!isDragging) {
+                    position -= speed;
+                    if (Math.abs(position) >= track.scrollWidth / 2) {
+                        position = 0; // reset for seamless loop
+                    }
+                    track.style.transform = `translateX(${position}px)`;
+                }
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Mouse drag
+            track.addEventListener("mousedown", (e) => {
+                isDown = true;
+                isDragging = true;
+                startX = e.pageX;
+                track.style.cursor = "grabbing";
+            });
+
+            document.addEventListener("mouseup", () => {
+                isDown = false;
+                isDragging = false;
+                track.style.cursor = "grab";
+            });
+
+            document.addEventListener("mousemove", (e) => {
+                if (!isDown) return;
+                const x = e.pageX;
+                const walk = (x - startX);
+                position += walk;
+                track.style.transform = `translateX(${position}px)`;
+                startX = x;
+            });
+
+            // Touch drag
+            track.addEventListener("touchstart", (e) => {
+                isDown = true;
+                isDragging = true;
+                startX = e.touches[0].pageX;
+            });
+
+            document.addEventListener("touchend", () => {
+                isDown = false;
+                isDragging = false;
+            });
+
+            document.addEventListener("touchmove", (e) => {
+                if (!isDown) return;
+                const x = e.touches[0].pageX;
+                const walk = (x - startX);
+                position += walk;
+                track.style.transform = `translateX(${position}px)`;
+                startX = x;
+            });
+        </script>
+
+    </main>
+
+    <!--  header-area-end  -->
+
+
+    <!--  ====== header extra info start ================================== -->
+    <!-- side-mobile-menu start -->
+
+    <div class="body-overlay"></div>
+    <!-- header extra info end  -->
+
+
+
+    <!-- ====== footer-area-start ============================================ -->
+    <footer>
+        <div class="footerWrapper">
+
+            <!-- Logo + About -->
+            <div class="footerCol">
+                <img src="images/logo/HPA-Logo.png" alt="Hyde Park Logo" class="footerLogo">
+                <p>Hyde Park Apartments offers comfort and convenience in the heart of London. Stay close to Hyde Park
+                    and enjoy modern serviced living.</p>
+            </div>
+
+            <!-- Connect -->
+            <div class="footerCol">
+                <h4>Connect</h4>
+                <p><i class="fa-solid fa-envelope"></i> reservation@hydeparkstay.com</p>
+                <p><i class="fa-solid fa-phone"></i> +44 (0) 20 8054 4740</p>
+            </div>
+
+            <!-- Main Reception -->
+            <div class="footerCol">
+                <h4>Main Reception</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 52-56 Inverness Terrace, <br>Westminster Borough,<br>
+                    London, W2 3LB, United Kingdom.</p>
+                <a href="https://maps.app.goo.gl/z1gPtaDuzgDGTxst6" target="_blank"><i class="fa-solid fa-map"></i> Get
+                    directions</a>
+            </div>
+
+            <!-- Apartments -->
+
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footerBottom">
+            © 2025 Hyde Park Apartments. All rights reserved. Designed By <a href="https://asprotechnologies.com/"
+                target="_blank">Aspro
+                Technologies</a>
+        </div>
+    </footer>
+    <!-- footer-area-end  -->
+
+    <a href="#" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <script>
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+    </script>
+
+
+
+    <!-- All js here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/image-loaded.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/waypoint.js"></script>
+    <script src="js/counterup-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

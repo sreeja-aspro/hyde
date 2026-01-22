@@ -1,0 +1,441 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hyde Park Apartments</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/x-icon">
+
+    <!-- All css here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/all-animations.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!--  ====== preloader=============================================  -->
+    <div id="preloader">
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /preloader -->
+
+    <!--  ====== header-area-start =======================================  -->
+
+    <div class="whatsapp-left-bottom">
+        <a href="https://wa.me/442077922800" target="_blank" aria-label="Chat on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
+
+    <header class="msk-navbar">
+        <div class="msk-container">
+            <a href="#" class="msk-logo"><img src="images/logo/HPA-Logo.png" alt="Logo"></a>
+            <div class="msk-right">
+                <div class="msk-phone"><i class="fas fa-phone"></i> +44 (0) 20 8054 4740</div>
+                <button id="navToggle" class="msk-toggle">
+                    <span class="msk-toggle-text">MENU</span>
+                    <span class="msk-hamburger"><span></span><span></span><span></span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-spacer"></div>
+
+    <aside id="mskDrawer" class="msk-drawer">
+        <div class="msk-drawer-header">
+            <img src="images/logo/HPA-Logo.png" alt="Logo">
+        </div>
+        <div class="msk-drawer-body">
+            <nav class="drawer-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+
+                <a href="gallery.html" class="act"><i class="fas fa-image"></i>
+                    Gallery</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+
+            <div class="msk-drawer-footer">
+                <div class="drawer-contact">
+                    <div class="phone"><i class="fas fa-phone"></i> +44 (0) 20 8054 4740</div>
+                    <div class="addr"><i class="fas fa-map-marker-alt"></i> Main reception: 52-56 Inverness Terrace,
+                        London,
+                        W2 3LB</div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </aside>
+    <script>
+        (function () {
+            const toggle = document.getElementById('navToggle');
+            const drawer = document.getElementById('mskDrawer');
+            const body = document.body;
+            const toggleText = toggle.querySelector('.msk-toggle-text');
+
+            function openMenu() {
+                drawer.classList.add('active');
+                toggle.classList.add('active');
+                body.classList.add('menu-open');
+                toggleText.textContent = 'CLOSE';
+            }
+            function closeMenu() {
+                drawer.classList.remove('active');
+                toggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                toggleText.textContent = 'MENU';
+            }
+
+            toggle.addEventListener('click', () => drawer.classList.contains('active') ? closeMenu() : openMenu());
+            document.addEventListener('keydown', e => { if (e.key === "Escape" && drawer.classList.contains('active')) closeMenu(); });
+            window.addEventListener('resize', () => { if (drawer.classList.contains('active')) closeMenu(); });
+        })();
+    </script>
+
+
+    <div class="inner-page-hero-area">
+        <div class="inner-page-height inner-page-bg d-flex align-items-center position-relative black-overly"
+            data-background="images/bg/gallery-bg.jpeg">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="inner-page-content text-center">
+
+                            <h1 class="text-white mb-20 text-capitalize aos-init" data-aos="fade-up"
+                                data-aos-duration="1800" data-aos-delay="50">Gallery</h1>
+                            <p class="text-white aos-init" data-aos="fade-up" data-aos-duration="2500"
+                                data-aos-delay="150">A Visual Journey Through Our Elegant Spaces</p>
+                        </div>
+                    </div><!-- /col -->
+
+                </div><!-- /row -->
+            </div><!-- /container -->
+
+            <nav aria-label="breadcrumb" class="inner-hero-nav position-absolute bottom-0 mb-20">
+                <ol class="breadcrumb justify-content-center bg-transparent">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active text-capitalize text-white" aria-current="page">Gallery
+                    </li>
+                </ol>
+            </nav><!-- /breadcrumb -->
+
+        </div>
+    </div>
+
+    <main>
+
+        <main class="hydeGalWrap" aria-label="Gallery">
+            <h1 class="hydeGalTitle">Our Gallery</h1>
+            <p class="hydeGalSub">A Glimpse into the Elegance and Charm of Hyde Park Apartments</p>
+
+            <div class="hydeGalGrid" id="hydeGalGrid">
+                <!-- item 0 -->
+                <figure class="hydeGalItem" data-index="0">
+                    <img class="hydeGalThumb" src="images/gallery/g1.jpg" alt="">
+
+                </figure>
+
+                <!-- item 1 -->
+                <figure class="hydeGalItem" data-index="1">
+                    <img class="hydeGalThumb" src="images/gallery/g2.jpg" alt="">
+
+                </figure>
+
+                <!-- item 2 -->
+                <figure class="hydeGalItem" data-index="2">
+                    <img class="hydeGalThumb" src="images/gallery/g3.jpg" alt="">
+
+                </figure>
+
+                <!-- item 3 -->
+                <figure class="hydeGalItem" data-index="3">
+                    <img class="hydeGalThumb" src="images/gallery/g4.jpg" alt="">
+
+                </figure>
+
+                <!-- item 4 -->
+                <figure class="hydeGalItem" data-index="4">
+                    <img class="hydeGalThumb" src="images/gallery/g5.jpg" alt="">
+
+                </figure>
+
+                <!-- item 5 -->
+                <figure class="hydeGalItem" data-index="5">
+                    <img class="hydeGalThumb" src="images/gallery/g6.jpg" alt="">
+
+                </figure>
+                <figure class="hydeGalItem" data-index="5">
+                    <img class="hydeGalThumb" src="images/gallery/g7.jpg" alt="">
+
+                </figure>
+                <figure class="hydeGalItem" data-index="5">
+                    <img class="hydeGalThumb" src="images/gallery/g8.jpg" alt="">
+
+                </figure>
+                <figure class="hydeGalItem" data-index="5">
+                    <img class="hydeGalThumb" src="images/gallery/g9.jpg" alt="">
+
+                </figure>
+                <figure class="hydeGalItem" data-index="5">
+                    <img class="hydeGalThumb" src="images/gallery/gl-1.jpg" alt="">
+
+                </figure>
+                <figure class="hydeGalItem" data-index="5">
+                    <img class="hydeGalThumb" src="images/gallery/gl-2.jpg" alt="">
+
+                </figure>
+                <figure class="hydeGalItem" data-index="5">
+                    <img class="hydeGalThumb" src="images/gallery/gl-3.jpg" alt="">
+
+                </figure>
+                <figure class="hydeGalItem" data-index="5">
+                    <img class="hydeGalThumb" src="images/gallery/gl-4.png" alt="">
+
+                </figure>
+            </div>
+        </main>
+
+        <!-- Modal -->
+        <div class="hydeModalRoot" id="hydeModal" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="hydeModalCard" role="document">
+                <button class="hydeModalNav hydeModalPrev" id="hydePrev" aria-label="Previous image">&lt;</button>
+                <div class="hydeModalImageWrap">
+                    <img src="" alt="" class="hydeModalImg" id="hydeModalImg">
+                    <div class="hydeModalCaption" id="hydeModalCaption"></div>
+                </div>
+                <button class="hydeModalNav hydeModalNext" id="hydeNext" aria-label="Next image">&gt;</button>
+                <button class="hydeModalClose" id="hydeClose" aria-label="Close dialog">✕</button>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                const grid = document.getElementById('hydeGalGrid');
+                const items = Array.from(grid.querySelectorAll('.hydeGalItem'));
+                const modalRoot = document.getElementById('hydeModal');
+                const modalImg = document.getElementById('hydeModalImg');
+                const modalCaption = document.getElementById('hydeModalCaption');
+                const btnPrev = document.getElementById('hydePrev');
+                const btnNext = document.getElementById('hydeNext');
+                const btnClose = document.getElementById('hydeClose');
+
+                // Build an array of image sources/captions
+                const gallery = items.map(item => {
+                    const img = item.querySelector('.hydeGalThumb');
+                    const caption = item.querySelector('.hydeGalCaption')?.textContent || '';
+                    return { src: img.src, alt: img.alt || caption, caption };
+                });
+
+                let currentIndex = 0;
+
+                function openModal(index) {
+                    currentIndex = index % gallery.length;
+                    const entry = gallery[currentIndex];
+                    modalImg.src = entry.src;
+                    modalImg.alt = entry.alt;
+                    modalCaption.textContent = entry.caption;
+                    modalRoot.classList.add('open');
+                    modalRoot.setAttribute('aria-hidden', 'false');
+                    // trap focus: focus close button
+                    btnClose.focus();
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeModal() {
+                    modalRoot.classList.remove('open');
+                    modalRoot.setAttribute('aria-hidden', 'true');
+                    modalImg.src = '';
+                    modalCaption.textContent = '';
+                    document.body.style.overflow = '';
+                }
+
+                function showNext() {
+                    currentIndex = (currentIndex + 1) % gallery.length;
+                    openModal(currentIndex);
+                }
+
+                function showPrev() {
+                    currentIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+                    openModal(currentIndex);
+                }
+
+                // Click on thumbnail to open
+                items.forEach((it, idx) => {
+                    it.addEventListener('click', () => openModal(idx));
+                    it.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') openModal(idx);
+                    });
+                    it.tabIndex = 0; // make focusable
+                });
+
+                // Controls
+                btnClose.addEventListener('click', closeModal);
+                btnNext.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+                btnPrev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+
+                // close clicking outside content
+                modalRoot.addEventListener('click', (e) => {
+                    if (e.target === modalRoot) closeModal();
+                });
+
+                // keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (modalRoot.classList.contains('open')) {
+                        if (e.key === 'Escape') closeModal();
+                        if (e.key === 'ArrowRight') showNext();
+                        if (e.key === 'ArrowLeft') showPrev();
+                    }
+                });
+
+                // Touch & swipe support for modal image
+                (function enableSwipe() {
+                    let startX = 0, endX = 0;
+                    modalImg.addEventListener('touchstart', (e) => {
+                        startX = e.changedTouches[0].screenX;
+                    }, { passive: true });
+                    modalImg.addEventListener('touchend', (e) => {
+                        endX = e.changedTouches[0].screenX;
+                        const diff = endX - startX;
+                        if (Math.abs(diff) > 40) {
+                            if (diff < 0) showNext();
+                            else showPrev();
+                        }
+                    });
+                })();
+
+                // Improve UX: preload images
+                gallery.forEach(g => {
+                    const im = new Image();
+                    im.src = g.src;
+                });
+            })();
+        </script>
+
+    </main>
+
+    <!--  header-area-end  -->
+
+
+    <!--  ====== header extra info start ================================== -->
+    <!-- side-mobile-menu start -->
+
+    <div class="body-overlay"></div>
+    <!-- header extra info end  -->
+
+
+
+    <!-- ====== footer-area-start ============================================ -->
+    <footer>
+        <div class="footerWrapper">
+
+            <!-- Logo + About -->
+            <div class="footerCol">
+                <img src="images/logo/HPA-Logo.png" alt="Hyde Park Logo" class="footerLogo">
+                <p>Hyde Park Apartments offers comfort and convenience in the heart of London. Stay close to Hyde Park
+                    and enjoy modern serviced living.</p>
+            </div>
+
+            <!-- Connect -->
+            <div class="footerCol">
+                <h4>Connect</h4>
+                <p><i class="fa-solid fa-envelope"></i> reservation@hydeparkstay.com</p>
+                <p><i class="fa-solid fa-phone"></i> +44 (0) 20 8054 4740</p>
+            </div>
+
+            <!-- Main Reception -->
+            <div class="footerCol">
+                <h4>Main Reception</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 52-56 Inverness Terrace, <br>Westminster Borough,<br>
+                    London, W2 3LB, United Kingdom.</p>
+                <a href="https://maps.app.goo.gl/z1gPtaDuzgDGTxst6" target="_blank"><i class="fa-solid fa-map"></i> Get
+                    directions</a>
+            </div>
+
+
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footerBottom">
+            © 2025 Hyde Park Apartments. All rights reserved. Designed By <a href="https://asprotechnologies.com/"
+                target="_blank">Aspro
+                Technologies</a>
+        </div>
+    </footer>
+    <!-- footer-area-end  -->
+
+
+    <a href="#" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <script>
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+    </script>
+
+
+
+    <!-- All js here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/image-loaded.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/waypoint.js"></script>
+    <script src="js/counterup-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,520 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hyde Park Apartments</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/x-icon">
+
+    <!-- All css here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/all-animations.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!--  ====== preloader=============================================  -->
+    <div id="preloader">
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /preloader -->
+
+    <!--  ====== header-area-start =======================================  -->
+
+    <header class="msk-navbar">
+        <div class="msk-container">
+            <a href="#" class="msk-logo"><img src="images/logo/HPA-Logo.png" alt="Logo"></a>
+            <div class="msk-right">
+                <div class="msk-phone"><i class="fas fa-phone"></i> +44 (0) 20 8054 4740</div>
+                <button id="navToggle" class="msk-toggle">
+                    <span class="msk-toggle-text">MENU</span>
+                    <span class="msk-hamburger"><span></span><span></span><span></span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-spacer"></div>
+
+    <aside id="mskDrawer" class="msk-drawer">
+        <div class="msk-drawer-header">
+            <img src="images/logo/HPA-Logo.png" alt="Logo">
+        </div>
+        <div class="msk-drawer-body">
+            <nav class="drawer-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="book.html" class="act"><i class="fas fa-calendar-check"></i>
+                    Plan Your Stay</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="apartments.html"><i class="fas fa-building"></i> Apartments</a>
+                <a href="gallery.html"><i class="fas fa-image"></i>
+                    Gallery</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+
+            <div class="msk-drawer-footer">
+                <div class="drawer-contact">
+                    <div class="phone"><i class="fas fa-phone"></i> +44 (0) 20 8054 4740</div>
+                    <div class="addr"><i class="fas fa-map-marker-alt"></i> Main reception: 52-56 Inverness Terrace,
+                        Westminster Borough, London, W2 3LB, United Kingdom.</div>
+                </div>
+                <a class="drawer-cta" href="booking.html"><i class="fas fa-calendar-check"></i> Book Now</a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="over-hidden">
+        <section class="aboutZoomWrap" id="aboutZoomSection">
+            <div class="aboutZoomText">
+                <h2>About Hyde Park Apartments</h2>
+                <p>
+                    Welcome to Hyde Park Apartments, where luxury meets comfort in the heart of London. Our main
+                    reception is conveniently located at 52-56 Inverness Terrace, Westminster Borough, London, W2 3LB,
+                    United Kingdom, providing easy access to the city’s iconic attractions, shopping districts, and
+                    transport links.
+
+                    We offer a curated selection of premium serviced apartments across Inverness Terrace and Bayswater,
+                    each designed to provide modern amenities and a welcoming environment for both short and extended
+                    stays.
+                    At Hyde Park Apartments, we pride ourselves on delivering exceptional service, stylish
+                    accommodations, and a seamless experience for all guests. Whether you are visiting London for
+                    business, leisure, or an extended stay, our apartments offer a perfect home-away-from-home
+                    experience.
+                </p>
+                <a href="booking.html" class="hydeBookBtn">
+                    <i class="fa-solid fa-calendar-check"></i> Book Now
+                </a>
+
+            </div>
+            <div class="aboutZoomImage">
+                <img src="images/about/about.jpg" alt="About Us">
+            </div>
+        </section>
+
+        <script>
+            // Create an Intersection Observer
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("aboutZoomVisible");
+                        observer.unobserve(entry.target); // optional: stop observing after animation
+                    }
+                });
+            }, { threshold: 0.3 }); // triggers when 30% of section is visible
+
+            // Observe the about section
+            const aboutSection = document.getElementById("aboutZoomSection");
+            observer.observe(aboutSection);
+        </script>
+
+
+        <script>
+            (function () {
+                const toggle = document.getElementById('navToggle');
+                const drawer = document.getElementById('mskDrawer');
+                const body = document.body;
+                const toggleText = toggle.querySelector('.msk-toggle-text');
+
+                function openMenu() {
+                    drawer.classList.add('active');
+                    toggle.classList.add('active');
+                    body.classList.add('menu-open');
+                    toggleText.textContent = 'CLOSE';
+                }
+                function closeMenu() {
+                    drawer.classList.remove('active');
+                    toggle.classList.remove('active');
+                    body.classList.remove('menu-open');
+                    toggleText.textContent = 'MENU';
+                }
+
+                toggle.addEventListener('click', () => drawer.classList.contains('active') ? closeMenu() : openMenu());
+                document.addEventListener('keydown', e => { if (e.key === "Escape" && drawer.classList.contains('active')) closeMenu(); });
+                window.addEventListener('resize', () => { if (drawer.classList.contains('active')) closeMenu(); });
+            })();
+        </script>
+
+        <div class="body1">
+            <section class="hydeApartSection">
+                <div class="hydeApartHeader">
+                    <h2>Explore Our Apartments</h2>
+                    <p>Choose from our premium apartments and discover rooms designed for comfort and style. Every stay
+                        offers a
+                        unique experience in the heart of London.</p>
+                </div>
+
+                <!-- Apartment List -->
+                <ul class="hydeApartList">
+                    <li class="hydeApartItem active" data-index="0">Hyde Park Superior</li>
+                    <li class="hydeApartItem" data-index="1">Imperial Court Suites</li>
+                    <li class="hydeApartItem" data-index="2">Imperial Court Studios</li>
+                    <li class="hydeApartItem" data-index="3">New Kent Apartments</li>
+                </ul>
+
+                <!-- Slick Carousel -->
+                <div class="hydeSlickWrap">
+                    <!-- Group 0 -->
+                    <div class="hydeSlickCarousel" data-group="0">
+                        <div class="hydeSlickItem">
+                            <img src="images/room/hyde-rm1.jpeg" alt="">
+
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/hyde-rm2.jpeg" alt="">
+
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/hyde-rm3.png" alt="">
+
+                        </div>
+                    </div>
+                    <div class="hydeSlickCarousel" data-group="1" style="display:none;">
+                        <div class="hydeSlickItem">
+                            <img src="images/room/suites-rm1.jpg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/suites-rm2.jpg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/suites-rm3.jpg" alt="">
+                        </div>
+
+                    </div>
+
+                    <!-- Group 2 : Imperial Court Studios -->
+                    <div class="hydeSlickCarousel" data-group="2" style="display:none;">
+                        <div class="hydeSlickItem">
+                            <img src="images/room/studios-rm1.jpeg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/studios-rm2.jpeg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/studios-rm3.jpeg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/studios-rm4.jpeg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/studios-rm5.jpeg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/studios-rm6.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Group 3 : New Kent Apartments -->
+                    <div class="hydeSlickCarousel" data-group="3" style="display:none;">
+                        <div class="hydeSlickItem">
+                            <img src="images/room/kent-rm1.jpg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/kent-rm2.jpg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/kent-rm3.jpg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/kent-rm4.jpg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/kent-rm5.jpg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/kent-rm6.jpg" alt="">
+                        </div>
+                        <div class="hydeSlickItem">
+                            <img src="images/room/kent-rm7.jpg" alt="">
+                        </div>
+                    </div>
+
+
+                </div><br><br>
+                <center><a href="booking.html" class="bookNowLightBtn">
+                        <i class="fa-solid fa-calendar-check"></i> Book Now
+                    </a></center>
+            </section>
+        </div>
+
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Slick JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+
+                function initSlick(carousel) {
+                    if (!carousel.hasClass('slick-initialized')) {
+                        carousel.slick({
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            arrows: true,
+                            autoplay: true,
+                            autoplaySpeed: 2500,
+                            speed: 800,
+                            infinite: true,
+                            prevArrow: '<button class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+                            nextArrow: '<button class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+                            responsive: [
+                                { breakpoint: 1200, settings: { slidesToShow: 2 } },
+                                { breakpoint: 768, settings: { slidesToShow: 1 } }
+                            ]
+                        });
+                    } else {
+                        carousel.slick('setPosition').slick('slickPlay');
+                    }
+                }
+
+                // Initialize all carousels
+                $('.hydeSlickCarousel').each(function () { initSlick($(this)); });
+
+                // Apartment filter click
+                $('.hydeApartItem').click(function () {
+                    $('.hydeApartItem').removeClass('active');
+                    $(this).addClass('active');
+
+                    const group = $(this).data('index');
+
+                    $('.hydeSlickCarousel').each(function () {
+                        $(this).hide();
+                        if ($(this).hasClass('slick-initialized')) $(this).slick('slickPause');
+                    });
+
+                    const $selected = $('.hydeSlickCarousel[data-group="' + group + '"]');
+                    $selected.show();
+                    initSlick($selected);
+                });
+
+            });
+        </script>
+        <section class="hydeVideoWrap">
+            <h2 class="hydeVideoTitle">Discover Our Hotel</h2>
+            <p class="hydeVideoDesc">
+                Experience comfort, luxury, and elegance in every detail of our spaces.
+                Our apartments are designed to give you a homely atmosphere with modern amenities.
+                Take a look inside and see what makes us special.
+            </p>
+
+            <div class="hydeVideoBox hydeZoomInit">
+                <img src="images/bg/book-bg.jpg" alt="Hotel Video Preview" class="hydeVideoThumb">
+                <div class="hydePlayBtn" id="hydePlayTrigger"></div>
+                <iframe id="hydeVideoFrame" class="hydeVideoFrame" src=""
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <script>
+            const playBtn = document.getElementById("hydePlayTrigger");
+            const videoFrame = document.getElementById("hydeVideoFrame");
+            const videoBox = document.querySelector(".hydeVideoBox");
+
+            playBtn.addEventListener("click", () => {
+                playBtn.style.display = "none";
+                videoBox.querySelector(".hydeVideoThumb").style.display = "none";
+                videoFrame.style.display = "block";
+                videoFrame.src += "&autoplay=1";
+            });
+
+            // Zoom-in effect on scroll
+            const observer2 = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("hydeZoomActive");
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            observer2.observe(document.querySelector(".hydeVideoBox"));
+        </script>
+
+
+        <section class="hydeFacilitiesWrapper">
+            <h2>Facilities at Hyde Park Stay</h2>
+
+            <div class="hydeFacilityGrid">
+                <!-- General Facilities -->
+                <div class="hydeFacilityCard">
+                    <h3>General Facilities</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-snowflake"></i> Air conditioning</li>
+                        <li><i class="fa-solid fa-suitcase"></i> Baggage store</li>
+                        <li><i class="fa-solid fa-wifi"></i> Free WiFi internet</li>
+                        <li><i class="fa-solid fa-globe"></i> High speed internet</li>
+                        <li><i class="fa-solid fa-spray-can-sparkles"></i> Housekeeping</li>
+                        <li><i class="fa-solid fa-video"></i> CCTV in common areas</li>
+                        <li><i class="fa-solid fa-shield-halved"></i> CCTV outside property</li>
+                    </ul>
+                </div>
+
+                <!-- Parking -->
+                <div class="hydeFacilityCard">
+                    <h3>Parking Options</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-square-parking"></i> Off-site parking</li>
+                        <li><i class="fa-solid fa-car-side"></i> Secure parking</li>
+                        <li><i class="fa-solid fa-circle-dollar-to-slot"></i> Metered parking</li>
+                        <li><i class="fa-solid fa-charging-station"></i> EV charging (limited)</li>
+                    </ul>
+                </div>
+
+                <!-- Cleaning -->
+                <div class="hydeFacilityCard">
+                    <h3>Cleaning & Safety</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-broom"></i> Professionally cleaned</li>
+                        <li><i class="fa-solid fa-spray-can"></i> Disinfected daily</li>
+                        <li><i class="fa-solid fa-pump-soap"></i> Hand sanitiser provided</li>
+                        <li><i class="fa-solid fa-user-shield"></i> Staff protective clothing</li>
+                        <li><i class="fa-solid fa-door-closed"></i> Rooms sealed after cleaning</li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const facilitiesSection = document.querySelector(".hydeFacilitiesWrapper");
+
+                    const observer = new IntersectionObserver(
+                        (entries) => {
+                            entries.forEach((entry) => {
+                                if (entry.isIntersecting) {
+                                    facilitiesSection.classList.add("show");
+                                    observer.unobserve(facilitiesSection);
+                                }
+                            });
+                        },
+                        { threshold: 0.2 }
+                    );
+
+                    observer.observe(facilitiesSection);
+                });
+            </script>
+            <a href="booking.html" class="hydeBookButton"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+        </section>
+
+    </main>
+    <!--  header-area-end  -->
+
+
+    <!--  ====== header extra info start ================================== -->
+    <!-- side-mobile-menu start -->
+
+    <div class="body-overlay"></div>
+    <!-- header extra info end  -->
+
+
+
+    <!-- ====== footer-area-start ============================================ -->
+    <footer>
+        <div class="footerWrapper">
+
+            <!-- Logo + About -->
+            <div class="footerCol">
+                <img src="images/logo/HPA-Logo.png" alt="Hyde Park Logo" class="footerLogo">
+                <p>Hyde Park Apartments offers comfort and convenience in the heart of London. Stay close to Hyde Park
+                    and enjoy modern serviced living.</p>
+            </div>
+
+            <!-- Connect -->
+            <div class="footerCol">
+                <h4>Connect</h4>
+                <p><i class="fa-solid fa-envelope"></i> reservation@hydeparkstay.com</p>
+
+                <p><i class="fa-solid fa-phone"></i> +44 (0) 20 8054 4740</p>
+            </div>
+
+            <!-- Main Reception -->
+            <div class="footerCol">
+                <h4>Main Reception</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 52-56 Inverness Terrace, <br>Westminster Borough,<br>
+                    London, W2 3LB, United Kingdom.</p>
+                <a href="https://maps.app.goo.gl/z1gPtaDuzgDGTxst6" target="_blank"><i class="fa-solid fa-map"></i> Get
+                    directions</a>
+            </div>
+
+            <!-- Apartments -->
+            <div class="footerCol">
+                <h4>Apartments</h4>
+                <p><i class="fa-solid fa-building"></i> Hyde Park Superior Apartments<br> 34 Inverness Terrace, London,
+                    W2 3JA
+                </p>
+                <p><i class="fa-solid fa-building"></i> Imperial Court Suites<br> 81 Inverness Terrace, Bayswater,
+                    London, W2 3JU</p>
+                <p><i class="fa-solid fa-building"></i> Imperial Court Studios<br> 77-79 Inverness Terrace, London, W2
+                    3JT</p>
+                <p><i class="fa-solid fa-building"></i> New Kent Apartments<br> 55 Inverness Terrace Bayswater, London,
+                    W2 3JN</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footerBottom">
+            © 2025 Hyde Park Apartments. All rights reserved. Designed By <a href="https://asprotechnologies.com/"
+                target="_blank">Aspro
+                Technologies</a>
+        </div>
+    </footer>
+    <!-- footer-area-end  -->
+
+
+    <!-- back top -->
+    <div id="scroll" class="scroll-up">
+        <div class="top text-center"><span class="white-bg theme-color d-block"><i
+                    class="fa-solid fa-angles-up"></i></span></div>
+    </div><!-- /scroll-up -->
+
+
+
+    <!-- All js here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/image-loaded.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/waypoint.js"></script>
+    <script src="js/counterup-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
